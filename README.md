@@ -3,15 +3,15 @@ Running Task 2 from a Docker Image. Dockerfile was used to build the image.To re
 Comments that provide further explanation are preceded by a '#'.
 
 
-Building docker image from dockerfile:
+# Building docker image from dockerfile:
 
 1) cd into the folder
 2) docker build -t task2image .
-# docker will find "Dockerfile" and start to build the image
+docker will find "Dockerfile" and start to build the image
 
 
 
-Setting up the ROS nodes:
+# Setting up the ROS nodes:
 
 1) Open up 3 terminals
 2) Plug in Arduino Board into USB port that has the name /dev/ttyACM0 (project currently assumes that the code in ToggleLEDArduinoSubscriberClient.ino has already been uploaded to the Arduino Uno)
