@@ -7,7 +7,7 @@ Comments that provide further explanation are preceded by a '#'.
 
 1) cd into the folder
 2) docker build -t task2image .
-docker will find "Dockerfile" and start to build the image
+(docker will find "Dockerfile" and start to build the image)
 
 
 
