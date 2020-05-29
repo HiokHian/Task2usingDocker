@@ -17,22 +17,22 @@ docker will find "Dockerfile" and start to build the image
 2) Plug in Arduino Board into USB port that has the name /dev/ttyACM0 (project currently assumes that the code in ToggleLEDArduinoSubscriberClient.ino has already been uploaded to the Arduino Uno)
 3) Follow the following steps sequentially
 
-1st terminal: (ros subscriber and client)
-docker run -it --device=/dev/ttyACM0 task2image bash  #to include ACM0 port in the docker environment
-rosrun rosserial_python serial_node.py /dev/ttyACM0
+Go to 1st terminal: (ros subscriber and client)
+1) docker run -it --device=/dev/ttyACM0 task2image bash  #to include ACM0 port in the docker environment
+2) rosrun rosserial_python serial_node.py /dev/ttyACM0
 
-2nd terminal: (roscore)
-docker ps #get the running container id
-docker exec -it {running container ID} bash
-source ./devel/setup.bash
-roscore
+Next, go to 2nd terminal: (roscore)
+1) docker ps #get the running container id
+2) docker exec -it {running container ID} bash
+3) source ./devel/setup.bash
+4) roscore
 
-3rd terminal: (ros publisher and server)
-docker ps #get the running container id
-docker exec -it {running container ID} bash
-source ./devel/setup.bash
-rosrun pypublish main.py
+Next, go to 3rd terminal: (ros publisher and server)
+1) docker ps #get the running container id
+2) docker exec -it {running container ID} bash
+3) source ./devel/setup.bash
+4) rosrun pypublish main.py
 
-1st terminal:
-Ctrl+C #shut down the ros subscriber and client and start it up again
-rosrun rosserial_python serial_node.py /dev/ttyACM0
+Lastly, go back to 1st terminal:
+1) Ctrl+C #shut down the ros subscriber and client and start it up again
+2) rosrun rosserial_python serial_node.py /dev/ttyACM0
